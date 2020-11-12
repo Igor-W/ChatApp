@@ -1,0 +1,22 @@
+.card {
+  width: 258.75px;
+  height: 237.5px;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    max-width: 100%;
+  }
+
+  .offset-md-3 {
+    margin-left: 0;
+  }
+}
+
+.card-header {
+  font-weight: 700;
+}
+
+.invalid-feedback {
+  margin-top: 0;
+}

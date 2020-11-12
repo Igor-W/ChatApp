@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>
+  {{dialogTitle}}
+</h1>
+<div mat-dialog-content>
+  <p class="pop_message">{{message}}</p>
+</div>
+<div mat-dialog-actions>
+  <button class="btn btn-success pop_btn" (click)="onConfirm()">Confirm</button>
+  <button class="btn btn-danger pop_btn" (click)="onCancel()">Cancel</button>
+</div>

@@ -1,0 +1,22 @@
+.pop_message {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.pop_btn:last-child {
+  margin-left: 10px;
+  width: 72.02px;
+}
+
+.mat-dialog-content {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+}
+
+.mat-dialog-title {
+  text-align: center;
+}

@@ -1,0 +1,162 @@
+/*Center part*/
+.center_part {
+  height: 100%;
+  width: 465px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30px;
+}
+
+
+.center_part_header {
+  margin-top: 75px;
+  margin-left: 65px;
+  color: #3b429c;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 3px;
+  align-self: flex-start;
+}
+
+.search {
+  width: 380px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 25px;
+  padding-left: 23px;
+  letter-spacing: 1px;
+  background: url('src/assets/images/icons/search_icon.png') no-repeat 95% 50%;
+  background-color: #fff;
+}
+
+  .search::-webkit-input-placeholder {
+    color: #dcdde1
+  }
+
+  .search::-moz-placeholder {
+    color: #dcdde1
+  }
+
+  .search:-moz-placeholder {
+    color: #dcdde1
+  }
+
+  .search:-ms-input-placeholder {
+    color: #dcdde1
+  }
+
+.contacts {
+  width: 100%;
+  height: 640px;
+  overflow: auto;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+
+
+.contact_card {
+  width: 380px;
+  height: 85px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: all .3s linear;
+}
+
+.contact_card_date {
+  align-self: flex-end;
+  letter-spacing: 1px;
+  color: #8d9097;
+  font-size: 18px;
+  padding-right: 20px;
+  position: absolute;
+  top: 10px;
+}
+
+.contact_card_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 2px 2px 5px 2px rgb(124, 124, 124);
+  margin-left: 15px;
+  transition: all .3s linear;
+}
+
+.contact_card_content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+}
+
+.contact_card_text {
+  padding-right: 120px;
+}
+
+.contact_card_name {
+  color: #3b429c;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  transition: all .3s linear;
+}
+
+.contact_card_old_msg {
+  color: gray;
+  font-size: 18px;
+  letter-spacing: .5px;
+  transition: all .3s linear;
+}
+
+.contact_card_indicator {
+  width: 20px;
+  height: 20px;
+  background-color: #ff3c70;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 18px;
+  position: relative;
+  margin-right: 10px;
+  transition: all .3s linear;
+}
+
+.contact_card_indicator_text {
+  position: absolute;
+  top: 60%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.contact_card.active, .contact_card:hover {
+  width: 450px;
+  height: 105px;
+  cursor: pointer;
+}
+
+  .contact_card_avatar.active, .contact_card:hover .contact_card_avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contact_card_name.active, .contact_card:hover .contact_card_name {
+    font-size: 25px;
+  }
+
+  .contact_card_old_msg.active, .contact_card:hover .contact_card_old_msg {
+    font-size: 23px;
+  }
+
+  .contact_card_indicator.active, .contact_card:hover .contact_card_indicator {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+  }

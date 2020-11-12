@@ -1,0 +1,206 @@
+.container {
+  margin-bottom: 100px;
+}
+
+h1, p, form, input, div, img, label {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(220,220,220,1);
+  padding: 0;
+  margin: 0;
+}
+
+table, th, td {
+  align-content: center;
+}
+
+tr {
+  height: 62px;
+}
+
+th, td {
+  padding: 5px;
+  color: black;
+  text-align: center;
+  border-top: 2px solid #fff;
+}
+
+th {
+  border-top: none;
+  position: sticky;
+  top: 0px;
+  background: white;
+  padding-bottom: 15px;
+}
+
+  th:first-child {
+    border-radius: 10px 0 0 0;
+    width: 270px;
+  }
+
+  th:last-child {
+    border-radius: 0 10px 0 0;
+  }
+
+.admin_table {
+  width: 100%;
+  background-color: #f1f5fe;
+  border-radius: 10px;
+  table-layout: fixed;
+}
+
+.adminForm {
+  width: 1400px;
+  max-height: 800px;
+}
+
+header h1 {
+  color: rgba(240,240,240,1);
+  font-family: 'black_jackregular';
+  font-weight: bold;
+  font-size: 8em;
+  font-variant: small-caps;
+  line-height: 1.5;
+  padding: 0.3em 0 0 0;
+  height: 1.5em;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(10,10,10,1);
+}
+
+.user_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.action_icon {
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(to top, rgb(101, 115, 255), rgb(108, 115, 251), rgb(115, 116, 247), rgb(123, 116, 242), rgb(130, 116, 238), rgb(137, 117, 234), rgb(144, 117, 230), rgb(151, 118, 226), rgb(158, 118, 222), rgb(166, 118, 217), rgb(173, 119, 213), rgb(180, 119, 209));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+  .action_icon:last-child {
+    background-image: linear-gradient(to top right, rgb(138, 99, 255), rgb(148, 90, 232), rgb(158, 82, 210), rgb(169, 73, 187), rgb(179, 65, 164), rgb(189, 56, 141), rgb(199, 48, 119), rgb(209, 39, 96), rgb(219, 31, 73), rgb(230, 22, 50), rgb(240, 14, 28), rgb(250, 5, 5));
+  }
+
+  .action_icon:hover {
+    filter: brightness(80%);
+  }
+
+.bottom_buttons {
+  margin-top: 10px;
+}
+
+.bottom_button {
+  margin-left: 10px;
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1400px;
+  }
+}
+
+.pp-logo {
+  height: 110px;
+  position: absolute;
+  left: 88%;
+  top: 0;
+  z-index: 10000;
+}
+
+.userFields {
+  text-align: center;
+}
+
+.actionEditBtns:first-child {
+  padding: 10px 17px;
+  font-weight: 700;
+}
+
+.actionEditBtns:last-child {
+  margin-left: 10px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.create_template {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.creat_rows {
+  margin: 30px;
+}
+
+.row {
+  flex-wrap: nowrap;
+}
+
+.form-group {
+  margin: 0 15px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+
+.form-check-input {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+}
+
+
+.create_btns {
+  margin-left: 45px;
+}
+
+.create_btn {
+  padding: 5px 10px;
+}
+
+  .create_btn:last-child {
+    margin-left: 10px;
+  }
+
+  .create_btn:first-child {
+    width: 65.59px;
+  }
+
+  .create_btn:last-child {
+    margin-left: 10px;
+  }
+
+.no_edite {
+  overflow: auto;
+}

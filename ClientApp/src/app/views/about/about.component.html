@@ -1,0 +1,114 @@
+<div class="about_me" *ngIf="editMode; else edit">
+  <div class="about_container">
+    <ul class="user_dates">
+      <li class="user_date">
+        <p>
+          Name: {{authorizedUser.firstName}}
+        </p>
+      </li>
+      <li class="user_date">
+        <p>
+          Surname: {{authorizedUser.lastName}}
+        </p>
+      </li>
+      <li class="user_date">
+        <p *ngIf="!authorizedUser.gender">
+          Gender: Male
+        </p>
+        <p *ngIf="authorizedUser.gender">
+          Gender: Female
+        </p>
+      </li>
+      <li class="user_date" *ngIf="editMode; else edit">
+        <p>
+          Phone number: {{authorizedUser.phoneNumber}}
+        </p>
+      </li>
+      <li class="user_date" *ngIf="editMode; else edit">
+        <p>
+          Email: {{authorizedUser.email}}
+        </p>
+      </li>
+      <li class="user_date">
+        <p>
+          Position: {{authorizedUser.position}}
+        </p>
+      </li>
+      <li>
+        <button type="button" class="btn btn-primary bottom_button" (click)="editCurentUser()" *ngIf="editMode; else edit">Edit</button>
+        <div *ngIf="!editMode">
+          <div class="action_icon" (click)="save()">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="action_icon" (click)="cancel()">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+    <div class="user_big_avatar no_edite">
+      <img src="{{authorizedUser.profileImage}}" alt="">
+    </div>
+  </div>
+</div>
+
+<ng-template #edit>
+  <div class="about_me">
+    <div class="about_container">
+      <ul class="user_dates">
+        <li class="user_date">
+          <p>
+            Name: {{authorizedUser.firstName}}
+          </p>
+        </li>
+        <li class="user_date">
+          <p>
+            Surname: {{authorizedUser.lastName}}
+          </p>
+        </li>
+        <li class="user_date">
+          <p *ngIf="!authorizedUser.gender">
+            Gender: Male
+          </p>
+          <p *ngIf="authorizedUser.gender">
+            Gender: Female
+          </p>
+        </li>
+        <li class="user_date">
+          <div class="edit_line">
+            <span>Phone number:</span>
+            <input type="tel" [(ngModel)]="authorizedUser.phoneNumber" class="form-control editPhoneInput" />
+          </div>
+        </li>
+        <li class="user_date">
+          <div class="edit_line">
+            <span>Email:</span>
+            <input type="email" [(ngModel)]="authorizedUser.email" class="form-control editPhoneInput" />
+          </div>
+        </li>
+        <li class="user_date">
+          <p>
+            Position: {{authorizedUser.position}}
+          </p>
+        </li>
+        <li>
+          <div *ngIf="!editMode" class="edit_line_icons">
+            <div class="action_icon" (click)="save()">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="action_icon" (click)="cancel()">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="user_big_avatar">
+        <img src="{{authorizedUser.profileImage}}" alt="">
+        <p class="editProfileparagraph">Input url with your profile image</p>
+        <input type="text" [(ngModel)]="authorizedUser.profileImage" class="form-control editPhoneInput edit" />
+      </div>
+    </div>
+  </div>
+</ng-template>
+

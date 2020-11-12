@@ -1,0 +1,22 @@
+<section class="center_part hide_chat">
+  <p class="center_part_header">
+    Chat
+  </p>
+  <input type="text"
+         class="search"
+         placeholder="Search">
+  <div class="contacts">
+    <div class="contact_card"
+         *ngFor="let user of users"
+         (click)="clickedContact(user); "
+         [class.active]="user === selectedUser">
+      <div class="contact_card_content">
+        <img src="{{user.profileImage}}" alt="avatar" class="contact_card_avatar" [class.active]="user === selectedUser">
+        <div class="contact_card_text">
+          <p class="contact_card_name" [class.active]="user === selectedUser">{{user.firstName}} {{user.lastName}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

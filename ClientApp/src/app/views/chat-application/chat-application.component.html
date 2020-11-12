@@ -1,0 +1,10 @@
+<div class="container">
+  <app-menu (onClick)="upCase($event)"></app-menu>
+  <img src="../assets/images/PPLogo.png" alt="" class="pp-logo">
+  <div class="main_part">
+    <app-contacts [class.active]="activeTab.menuItemName === 'chat'"></app-contacts>
+    <app-chat [class.active]="activeTab.menuItemName === 'chat'"></app-chat>
+    <app-about [class.active]="activeTab.menuItemName === 'about me'"></app-about>
+    <app-teams [class.active]="activeTab.menuItemName === 'my teams'"></app-teams>
+  </div>
+</div>

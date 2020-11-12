@@ -1,0 +1,62 @@
+/*Main part*/
+
+.main_part {
+  background-color: #f1f5fe;
+  height: 100%;
+  width: 1115px;
+  border-radius: 30px;
+  position: relative;
+  right: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pp-logo {
+  width: 200px;
+  height: 110px;
+  position: absolute;
+  top: 10px;
+  left: 1200px;
+  z-index: 10000;
+}
+
+app-contacts {
+  display: none;
+}
+
+  app-contacts.active {
+    display: block;
+  }
+
+app-chat {
+  display: none;
+}
+
+  app-chat.active {
+    display: block;
+  }
+
+app-about {
+  display: none;
+}
+
+  app-about.active {
+    display: block;
+  }
+
+app-teams {
+  display: none;
+}
+
+  app-teams.active {
+    display: block;
+  }
+
+.container {
+  display: flex;
+  width: 1400px;
+  height: 830px;
+  font-family: Peddana-Regular;
+  position: relative;
+}

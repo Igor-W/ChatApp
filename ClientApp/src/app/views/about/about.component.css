@@ -1,0 +1,146 @@
+.about_me {
+  width: 1145px;
+  height: 750px;
+}
+
+.user_dates {
+  width: 50%;
+}
+
+.about_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.user_big_avatar {
+}
+
+  .user_big_avatar img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 5px 2px rgb(124, 124, 124);
+    position: relative;
+  }
+
+.user_date {
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.edit_icon {
+  background-image: linear-gradient(to top, rgb(101, 115, 255), rgb(108, 115, 251), rgb(115, 116, 247), rgb(123, 116, 242), rgb(130, 116, 238), rgb(137, 117, 234), rgb(144, 117, 230), rgb(151, 118, 226), rgb(158, 118, 222), rgb(166, 118, 217), rgb(173, 119, 213), rgb(180, 119, 209));
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+  .edit_icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 10px;
+    color: #fff;
+  }
+
+.edit_photo_icon {
+  border-radius: 50%;
+  background-image: linear-gradient(to top, rgb(101, 115, 255), rgb(108, 115, 251), rgb(115, 116, 247), rgb(123, 116, 242), rgb(130, 116, 238), rgb(137, 117, 234), rgb(144, 117, 230), rgb(151, 118, 226), rgb(158, 118, 222), rgb(166, 118, 217), rgb(173, 119, 213), rgb(180, 119, 209));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 130px;
+  bottom: 180px;
+  cursor: pointer;
+}
+
+  .edit_photo_icon i {
+    font-size: 40px;
+    padding: 10px;
+    color: #fff;
+  }
+
+.edit_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editPhoneInput {
+  width: 330px;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+  .editPhoneInput.edit {
+    width: 400px;
+  }
+
+.editProfileparagraph {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+
+.action_icon {
+  width: 40px;
+  height: 40px;
+  background-image: linear-gradient(to top, rgb(101, 115, 255), rgb(108, 115, 251), rgb(115, 116, 247), rgb(123, 116, 242), rgb(130, 116, 238), rgb(137, 117, 234), rgb(144, 117, 230), rgb(151, 118, 226), rgb(158, 118, 222), rgb(166, 118, 217), rgb(173, 119, 213), rgb(180, 119, 209));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+  .action_icon:last-child {
+    margin-left: 10px;
+    background-image: linear-gradient(to top right, rgb(138, 99, 255), rgb(148, 90, 232), rgb(158, 82, 210), rgb(169, 73, 187), rgb(179, 65, 164), rgb(189, 56, 141), rgb(199, 48, 119), rgb(209, 39, 96), rgb(219, 31, 73), rgb(230, 22, 50), rgb(240, 14, 28), rgb(250, 5, 5));
+  }
+
+  .action_icon:hover {
+    filter: brightness(80%);
+  }
+
+.bottom_button {
+  height: 40px;
+  margin-top: 15px;
+  width: 80px;
+  font-size: 25px;
+}
+
+.edit_line_icons {
+  display: flex;
+  margin-top: 15px;
+}
+
+.action_icon:first-child {
+  margin: 0;
+}
+
+.no_edite {
+  margin-bottom: 121px;
+}
+
+.no_add {
+  overflow: auto;
+}

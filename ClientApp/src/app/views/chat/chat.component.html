@@ -1,0 +1,34 @@
+<section class="right_part hide_chat">
+  <div class="contact_card_main">
+    <div class="contact_card_content_main">
+      <img src="{{mainUser != null ? mainUser.profileImage : 'assets/images/anonim1.png'}}" alt="" class="contact_card_avatar_main">
+      <div class="contact_card_text_main">
+        <p class="contact_card_name_main">{{mainUser != null ? mainUser.firstName + ' ' + mainUser.lastName : 'No name'}}</p>
+        <p class="contact_card_old_msg_main">Position: <span>{{mainUser != null ? mainUser.position : 'No position'}}</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="chat_section">
+    <div class="messages_section">
+      <div [class.my_message]="msg.senderId != mainUser.id"
+           [class.his_message]="msg.senderId == mainUser.id"
+           *ngFor="let msg of messages">
+        <div [class.my_message_text_box]="msg.senderId != mainUser.id"
+             [class.his_message_text_box]="msg.senderId == mainUser.id">
+          <div [class.my_message_text]="msg.senderId != mainUser.id"
+               [class.his_message_text]="msg.senderId == mainUser.id">{{msg.message}}</div>
+          <div [class.triangle_right]="msg.senderId != mainUser.id"
+               [class.triangle_left]="msg.senderId == mainUser.id"></div>
+        </div>
+        <p id="time-paragraph">{{msg.createdAt | date : 'medium'}}</p>
+      </div>
+      <span style="text-align: center; font-size: 25px; color: #8d9097" [class.hide]="messages != null">No messages</span>
+    </div>
+    <form action="" class="typing_form">
+      <textarea class="chat_message" placeholder="Type Something..." name="message" id="#message" [(ngModel)] ="currentMessage.message" #message='ngModel'></textarea>
+      <button type="submit" class="chat_submit_button" (click)="onButtonClick()">
+        <i class="fas fa-paper-plane send_icon"></i>
+      </button>
+    </form>
+  </div>
+</section>

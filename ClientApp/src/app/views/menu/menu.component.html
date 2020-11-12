@@ -1,0 +1,28 @@
+<section class="left_part">
+  <div class="avatar">
+    <img src="{{authorizedUser != null ? authorizedUser.profileImage : 'https://qph.fs.quoracdn.net/main-qimg-6d72b77c81c9841bd98fc806d702e859'}}" alt="" class="avatar_img">
+    <p class="avatar_name">
+      {{authorizedUser != null ? authorizedUser.firstName : ''}} {{authorizedUser != null ? authorizedUser.lastName : ''}}
+    </p>
+  </div>
+  <div class="menu">
+    <div class="menu_item"
+         *ngFor="let tab of tabs"
+         (click)="clickOnTab(tab)"
+         [class.active]="tab === selectedTab">
+      <div class="menu_item_indicator"
+           [class.active]="tab === selectedTab"></div>
+      <i class="{{tab.menuIcon}} menu_item_icon"></i>
+      <p class="menu_item_name">
+        {{tab.menuItemName}}
+      </p>
+    </div>
+    <div class="menu_item" (click)="openConfirmDialog()">
+      <div class="menu_item_indicator"></div>
+      <i class="fas fa-sign-out-alt menu_item_icon"></i>
+      <p class="menu_item_name">
+        sign out
+      </p>
+    </div>
+  </div>
+</section>

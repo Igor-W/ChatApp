@@ -1,0 +1,139 @@
+<img src="../../../assets/images/PPLogo.png" alt="" class="pp-logo">
+<div class="container">
+  <header>
+    <h1>Admin Panel</h1>
+  </header>
+  <div class="adminForm no_edite">
+    <table class="admin_table" *ngIf="tableMode; else create">
+      <tr>
+        <th>Id</th>
+        <th>User name</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Avatar</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let usr of allUsers">
+        <ng-template [ngIf]="user?.id != usr.id" [ngIfElse]="edit">
+          <td>{{usr.id}}</td>
+          <td> {{usr.userName}}</td>
+          <td>{{usr.firstName}}</td>
+          <td>{{usr.lastName}}</td>
+          <td *ngIf="!usr.gender">Male</td>
+          <td *ngIf="usr.gender">Female</td>
+          <td>{{usr.position}}</td>
+          <td>{{usr.phoneNumber}}</td>
+          <td>{{usr.email}}</td>
+          <td><img src="{{usr.profileImage}}" class="user_avatar" alt=""></td>
+          <td>
+            <div class="actions">
+              <div class="action_icon" (click)="editUser(usr)">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+              <div class="action_icon" (click)="openConfirmDialog(usr)">
+                <i class="fas fa-trash-alt"></i>
+              </div>
+            </div>
+          </td>
+        </ng-template>
+      </tr>
+    </table>
+  </div>
+  <div class="bottom_buttons" *ngIf="tableMode">
+    <button type="button" class="btn btn-primary bottom_button" (click)="add()">Add new user</button>
+    <button type="button" class="btn btn-danger bottom_button" (click)="openLogOutDialog()">Log out</button>
+  </div>
+</div>
+
+<!--template pentru editarea-->
+<ng-template #edit>
+  <td>{{user.id}}</td>
+  <td>
+    <input type="text" [(ngModel)]="user.userName" class="form-control userFields" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="user.firstName" class="form-control userFields" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="user.lastName" class="form-control userFields" />
+  </td>
+  <td *ngIf="!user.gender">Male</td>
+  <td *ngIf="user.gender">Female</td>
+  <td>
+    <input type="text" [(ngModel)]="user.position" class="form-control userFields" />
+  </td>
+  <td>
+    <input type="tel" [(ngModel)]="user.phoneNumber" class="form-control userFields" />
+  </td>
+  <td>
+    <input type="email" [(ngModel)]="user.email" class="form-control userFields" />
+  </td>
+  <td><img src="{{user.profileImage}}" class="user_avatar" alt=""></td>
+  <td>
+    <div class="actions">
+      <div class="action_icon" (click)="save()">
+        <i class="fas fa-check"></i>
+      </div>
+      <div class="action_icon" (click)="cancel()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+  </td>
+</ng-template>
+
+<!--template pentru adaugarea-->
+<ng-template #create>
+  <div class="create_template text-warning">
+    <div class="row row-cols-2 creat_rows">
+      <div class="form-group col">
+        <label>First name</label>
+        <input type="text" [(ngModel)]="user.firstName" class="form-control" name="firstName" />
+      </div>
+      <div class="form-group col create_midle_col">
+        <label>Last name</label>
+        <input type="text" [(ngModel)]="user.lastName" class="form-control" name="lastName" />
+      </div>
+    </div>
+    <div class="row row-cols-2 creat_rows">
+      <div class="form-group col">
+        <label>User name</label>
+        <input type="text" [(ngModel)]="user.userName" class="form-control" name="userName" />
+      </div>
+      <div class="form-group col">
+        <label>Password</label>
+        <input type="text" [(ngModel)]="user.password" class="form-control" name="password" />
+      </div>
+    </div>
+    <div class="row row-cols-2 creat_rows">
+      <div class="form-group col">
+        <label>Gender</label>
+        <select class="custom-select" id="inputGroupSelect01" name="gender">
+          <option selected value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="user.email" class="form-control" name="email" />
+      </div>
+    </div>
+    <div class="row row-cols-2 creat_rows">
+      <div class="form-group col">
+        <label>Position</label>
+        <input type="text" [(ngModel)]="user.position" class="form-control" name="position" />
+      </div>
+      <div class="form-group col create_midle_col">
+        <label>Phone number</label>
+        <input type="tel" [(ngModel)]="user.phoneNumber" class="form-control" name="phoneNumber" />
+      </div>
+    </div>
+    <div class="create_btns">
+      <input type="button" value="Save" class="btn btn-success create_btn" (click)="save()" />
+      <input type="button" value="Cancel" (click)="cancel()" class="btn btn-danger create_btn" />
+    </div>
+  </div>
+</ng-template>
